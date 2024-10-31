@@ -29,13 +29,17 @@ public class RentalSystem {
         return customers;
     }
     public void printVehicles() {
+        int i=1;
         for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
+            System.out.println(i +  " - " + vehicle);
+            i++;
         }
     }
     public void printCustomers() {
+        int i=1;
         for (Customer customer : customers) {
-            System.out.println(customer);
+            System.out.println(i +  " - " + customer);
+            i++;
         }
     }
     public void printRentals() {
@@ -46,17 +50,15 @@ public class RentalSystem {
     public void getTopRentals() {
         double[] sortedValues = new double[rentals.size()];
         ArrayList<Rental> topRentals = new ArrayList<>();
-        Set g = new TreeSet();
+        Set<Double> g = new TreeSet<>();
+        int i=0;
         for (Rental r : rentals) {
-            g.add(r);
+            g.add(r.getDays() * r.getPriceThatDay());
+            i++;
         }
-        System.out.println(g);
-//        for (int i = 0; i < rentals.size(); i++) {
-//            sortedValues[i] = rentals.get(i).getDays() * rentals.get(i).getPriceThatDay();
-//        }
-//        sortedValues = Arrays.stream(sortedValues).sorted().toArray();
-//        for (int i = 4; i <= 0; i++) {
-//            System.out.println(rentals.get(sortedValues[i]));
+
+//        for (Map.Entry<Double, Integer> entry : g.entrySet()) {
+//            System.out.println(entry.getKey() + " " + entry.getValue());
 //        }
     }
 }
