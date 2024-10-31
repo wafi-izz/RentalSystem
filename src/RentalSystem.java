@@ -61,6 +61,10 @@ public class RentalSystem {
 //            System.out.println(entry.getKey() + " " + entry.getValue());
 //        }
     }
+    public void checkVehicleRentalStatus(int vehileIndex){
+        Vehicle vehicle = vehicles.get(vehileIndex);
+
+    }
 }
 
 

@@ -4,10 +4,12 @@ public class Vehicle{
     String licensePlate;
     String colour;
     double pricePerDay;
+    boolean isRented;
     public Vehicle(String licensePlate, String colour, double pricePerDay){
         this.licensePlate = licensePlate;
         this.colour = colour;
         this.pricePerDay = pricePerDay;
+        this.isRented = false;
     }
 
     public String getLicensePlate() {
@@ -32,6 +34,9 @@ public class Vehicle{
 
     public void setPricePerDay(double pricePerDay) {
         this.pricePerDay = pricePerDay;
+    }
+    public void isRented() {
+        this.isRented = true;
     }
     @Override
     public String toString(){
