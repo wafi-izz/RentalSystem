@@ -35,6 +35,9 @@ public class MainMenu {
                     viewTopFive();
                     break;
                 case 8:
+                    checkRentSatus();
+                    break;
+                case 9:
                     return;
                 default:
                     System.out.println("Invalid Option");
@@ -55,7 +58,8 @@ public class MainMenu {
         System.out.println("5 - rent a car");
         System.out.println("6 - View rentals");
         System.out.println("7 - View the Top 5");
-        System.out.println("8 - exit");
+        System.out.println("8 - check if is rented");
+        System.out.println("9 - exit");
         System.out.println();
     }
 
